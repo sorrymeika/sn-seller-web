@@ -1,6 +1,13 @@
 const { Controller } = require("egg");
 
+
 class SellerController extends Controller {
+    async getMySellers() {
+        const { ctx } = this;
+
+        const result = await ctx.service.admin.seller.getMySellers();
+        ctx.body = result;
+    }
 
     async listPlatformSellers() {
         const { ctx } = this;
@@ -36,7 +43,7 @@ class SellerController extends Controller {
             pid
         } = ctx.request.body;
 
-        const result = await ctx.service.seller.addCate({
+        const result = await ctx.service.admin.seller.addCate({
             name,
             level,
             pid
@@ -58,7 +65,7 @@ class SellerController extends Controller {
             id
         } = ctx.request.body;
 
-        const result = await ctx.service.seller.updateSeller({
+        const result = await ctx.service.admin.seller.updateSeller({
             name,
             id
         });

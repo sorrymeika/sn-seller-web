@@ -51,20 +51,15 @@ exports.cors = {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
 };
 
-exports.middleware = ['gzip'];
+// exports.middleware = ['gzip'];
+// exports.gzip = {
+//     threshold: 2048,
+// };
 
-exports.snauth = {
+exports.auth = {
     registry: {
         port: 3006
     },
-    excludes: [
-        '/auth/login',
-        '/test/testUpload',
-        '/test/testFile'
-    ],
     permissions: require('./permissions'),
 };
 
-exports.gzip = {
-    threshold: 2048,
-};

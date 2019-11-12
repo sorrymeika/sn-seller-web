@@ -1,6 +1,7 @@
 module.exports = app => {
     const { router, controller } = app;
-    router.post('/seller/listPlatformSellers', controller.seller.listPlatformSellers);
-    router.post('/seller/add', controller.seller.addSeller);
-    router.post('/seller/update', controller.seller.updateSeller);
+    router.post('/admin/seller/getMySellers', controller.admin.seller.getMySellers);
+    router.post('/admin/seller/listPlatformSellers', controller.admin.seller.listPlatformSellers);
+    router.post('/admin/seller/add', controller.admin.seller.addSeller);
+    router.post('/admin/seller/update', controller.admin.seller.updateSeller);
 };

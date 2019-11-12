@@ -1,9 +1,9 @@
-module.exports = [{
-    url: /^\/user\//,
-    apps: [1],
-    permissionIds: []
-}, {
-    url: /^\/products\/add/,
-    apps: [1],
-    permissionIds: [10001001]
-}];
+module.exports = [
+    /**
+     * 后台权限
+     */
+    {
+        url: '/admin/seller/getMySellers',
+        apps: [1, 2]
+    }
+];
