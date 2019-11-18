@@ -21,7 +21,7 @@ class SellerController extends Controller {
             status,
         } = ctx.request.body;
 
-        const result = await ctx.service.seller.listPlatformSellers({
+        const result = await ctx.service.admin.seller.listPlatformSellers({
             status
         });
         ctx.body = result;
